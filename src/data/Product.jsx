@@ -3,7 +3,7 @@ const products = [
     id: 1,
     name: "Classic Leather Watch",
     price: 4999,
-    image: "/assets/watches/leather-watch.jpg",
+    image: "https://www.vecteezy.com/free-png/leather-watch",
     category: "Watches",
     description:
       "Timeless analogue watch with genuine leather strap and stainless steel case.",

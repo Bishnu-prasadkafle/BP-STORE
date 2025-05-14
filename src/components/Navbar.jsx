@@ -7,8 +7,8 @@ const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className='w-full shadow-md bg-gradient-to-r from-[#f99c73] to-[#f2f2f2] transition-all duration-300'>
-      <div className='max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center'>
+    <header className='sticky top-0 z-50 w-full shadow-md bg-gradient-to-r from-[#f99c73] to-[#f2f2f2] transition-all duration-300'>
+      <div className='max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-centerc sticky-top'>
         {/* Logo */}
         <Link to='/' className='flex items-center space-x-2'>
           <img
