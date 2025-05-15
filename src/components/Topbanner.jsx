@@ -2,17 +2,17 @@ import React from "react";
 
 const Topbanner = () => {
   return (
-    <div className='bg-[#364350] text-[#de7d5c] py-3 px-6 text-sm md:text-base font-medium'>
+    <div className=' bg-[#364350] text-[#de7d5c] py-3 px-6 text-sm md:text-base font-medium'>
       <div className='max-w-screen-xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2'>
         {/* Left: Location and Contact */}
         <div className='flex items-center gap-2'>
           <span>📍 Kawasoti, Nawalpur</span>
           <span> | </span>
-          <span>📞 +977-9812345678</span>
+          <span>📞 +977-9805868705</span>
         </div>
 
         {/* Center: Brand Quote */}
-        <div className='text-center font-semibold animate-pulse  '>
+        <div className='text-center font-semibold animate-pulse'>
           🛍️ BP-Shop: Shop smarter, not harder! – Quality, Style &
           Affordability!!
         </div>
