@@ -48,7 +48,7 @@ const products = [
   },
   {
     name: "Serum",
-    description: "",
+    description: ".........",
     price: 1800,
     image: serum,
   },

@@ -48,9 +48,6 @@ function Home() {
       <div>
         <UpdateProducts />
       </div>
-      <div>
-        <Footer />
-      </div>
     </div>
   );
 }

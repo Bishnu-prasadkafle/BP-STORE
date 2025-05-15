@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 
 // import { HomeIcon } from "lucide-react";
 import Home from "./pages/Home";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path='/cart' element={<div>Cart</div>} />
         <Route path='/account' element={<div>Account</div>} />
       </Routes>
+      <Footer />
     </>
   );
 }
