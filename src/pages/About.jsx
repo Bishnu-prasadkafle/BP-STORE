@@ -1,10 +1,12 @@
 import React from "react";
+import { ArrowRight } from "lucide-react";
+import AboutHero from "../components/About/Hero";
 
 function About() {
   return (
-    <div>
+    <div className='h-screen'>
       <div>
-        <h1>Main Content</h1>
+        <AboutHero />
       </div>
     </div>
   );
