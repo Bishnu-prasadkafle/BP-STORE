@@ -4,32 +4,33 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 // Importing product images
 import ladyhandbag from "../assets/ladyhand.png";
 import converse from "../assets/converse.png";
-import hoddie from "../assets/hoddie.png";
+import cream from "../assets/cream.png";
 import perfume from "../assets/perfume.png";
 import hat from "../assets/HAT.png";
 import gopro from "../assets/gopro.png";
 import serum from "../assets/serum1.png";
 import watch from "../assets/watch.png";
 import facewash from "../assets/face-wash1.png";
+import bracelet from "../assets/bracelet.png";
 
 const products = [
   {
     name: "CHANEL Mini flap bag",
     description: "Lambskin & gold-tone metal, black",
-    price: 9900000,
+    price: 9900,
     image: ladyhandbag,
   },
   {
     name: "Converse Shoes",
     description: "Chuck 70 Platform Shoes Ecru US 9al",
-    price: 540000,
+    price: 5400,
     image: converse,
   },
   {
-    name: "Essential Hoodie",
-    description: "Buttercream Essential Hoodie",
-    price: 370000,
-    image: hoddie,
+    name: "Face Cream",
+    description: "Face toner for men and women",
+    price: 5000,
+    image: cream,
   },
   {
     name: "Veleno Perfume",
@@ -57,10 +58,10 @@ const products = [
     image: watch,
   },
   {
-    name: "Sony WH-1000XM5",
-    description: "Noise Cancelling Wireless Headphones",
-    price: 950000,
-    image: "/images/sony-headphones.jpg",
+    name: "Titanium Steel Men's Bracelet",
+    description: "Made with premium titanium steel.",
+    price: 2500,
+    image: bracelet,
   },
   {
     name: "GoPro HERO4",
@@ -111,11 +112,11 @@ const FeaturedProducts = () => {
       {/* Product Scroll Container */}
       <div
         ref={scrollRef}
-        className='flex flex-row overflow-x-auto space-x-6 scrollbar-hide px-4'>
+        className='flex flex-row   overflow-x-auto space-x-6 scrollbar-hide px-4'>
         {products.map((product, index) => (
           <div
             key={index}
-            className='min-w-[250px] flex-shrink-0 rounded-xl shadow-md p-4 bg-white relative transition-transform duration-300 hover:scale-105'>
+            className='w-80 flex-shrink-0 rounded-xl shadow-md p-4 bg-white relative transition-transform duration-300 hover:scale-105'>
             <img
               src={product.image}
               alt={product.name}
@@ -124,7 +125,9 @@ const FeaturedProducts = () => {
             <h3 className='text-lg font-semibold text-gray-900 mb-1'>
               {product.name}
             </h3>
-            <p className='text-gray-500 text-sm mb-2'>{product.description}</p>
+            <p className='text-gray-500 overflow-ellipsis text-sm mb-2'>
+              {product.description}
+            </p>
             <div className='text-red-600 font-bold text-xl mb-1'>
               NRS: {product.price.toLocaleString()}
             </div>

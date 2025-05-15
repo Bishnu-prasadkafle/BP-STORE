@@ -2,12 +2,15 @@ import React from "react";
 import { ArrowRight } from "lucide-react";
 import image1 from "../assets/image1.png";
 import FeaturedProducts from "../components/ProductFeartures.";
+import PromoBanner from "../components/PromoBanner";
+import Footer from "../components/Footer";
+import UpdateProducts from "../components/UpdateProducts";
 
 function Home() {
   return (
-    <div className='bg-white min-h-screen px-6 lg:px-20 py-10'>
+    <div className='bg-white min-h-screen w-full py-10'>
       {/* Hero Section (Left + Right) */}
-      <div className='flex flex-col-reverse lg:flex-row items-center justify-between'>
+      <div className='flex flex-col-reverse lg:flex-row items-center justify-between px-15'>
         {/* Left Content */}
         <div className='max-w-xl mt-10 lg:mt-0'>
           <h1 className='font-extrabold text-4xl sm:text-5xl text-black leading-tight mb-4'>
@@ -38,6 +41,15 @@ function Home() {
       {/* Featured Section */}
       <div>
         <FeaturedProducts />
+      </div>
+      <div>
+        <PromoBanner />
+      </div>
+      <div>
+        <UpdateProducts />
+      </div>
+      <div>
+        <Footer />
       </div>
     </div>
   );
