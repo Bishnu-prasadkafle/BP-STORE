@@ -1,18 +1,27 @@
 import React from "react";
 
-const AboutHero = () => {
+const AboutUs = () => {
   return (
-    <section className='bg-gray-100 py-20'>
-      <div className='container mx-auto px-4 text-center'>
-        <h1 className='text-4xl font-bold text-gray-800 mb-4'>About BP-Shop</h1>
-        <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
-          Welcome to BP-Shop – your trusted destination for quality fashion,
-          gadgets, and lifestyle products. We're passionate about delivering
-          top-notch products with the best shopping experience.
+    <div
+      className='relative bg-cover bg-center bg-no-repeat  flex items-center justify-center text-white'
+      style={{
+        backgroundImage: `url('')`,
+      }}>
+      {/* Overlay for dark effect */}
+      <div className='absolute inset-0 bg-black bg-opacity-60 z-0'></div>
+
+      {/* About Us Content */}
+      <div className='relative z-10 p-8 max-w-3xl text-center'>
+        <h1 className='text-4xl md:text-5xl font-bold mb-6'>About Us</h1>
+        <p className='text-lg md:text-xl leading-relaxed'>
+          Welcome to our platform! We are dedicated to providing the best
+          service and user experience. Our mission is to empower users through
+          innovative technology and reliable support. Thank you for being a part
+          of our journey.
         </p>
       </div>
-    </section>
+    </div>
   );
 };
 
-export default AboutHero;
+export default AboutUs;

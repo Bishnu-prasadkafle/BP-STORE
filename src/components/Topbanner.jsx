@@ -2,7 +2,7 @@ import React from "react";
 
 const Topbanner = () => {
   return (
-    <div className=' bg-[#364350] text-[#de7d5c] py-3 px-6 text-sm md:text-base font-medium'>
+    <div className='sticky-top-0 bg-[#364350] text-[#de7d5c] py-3 px-6 text-sm md:text-base font-medium'>
       <div className='max-w-screen-xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2'>
         {/* Left: Location and Contact */}
         <div className='flex items-center gap-2'>

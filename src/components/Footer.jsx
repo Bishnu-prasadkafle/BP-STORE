@@ -12,7 +12,7 @@ import {
 const Footer = () => {
   return (
     <footer className='bg-zinc-900 text-white w-full'>
-      <div className='max-w-7xl  px-4 py-3 grid grid-cols-1 md:grid-cols-4 gap-8'>
+      <div className='max-w-8xl  px-4 py-3 grid grid-cols-1 md:grid-cols-4 gap-8'>
         {/* Logo & Description */}
         <div>
           <h2 className='text-xl font-bold text-red-500'>BP–SHOP</h2>
