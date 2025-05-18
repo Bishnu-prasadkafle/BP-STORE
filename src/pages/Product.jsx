@@ -5,7 +5,7 @@ import Sidebar from "../components/Product/Sidebar";
 import SortDropdown from "../components/Product/SortDropdown";
 import Pagination from "../components/Product/Pagination";
 
-const PRODUCTS_PER_PAGE = 6;
+const PRODUCTS_PER_PAGE = 9;
 
 function Product() {
   const [category, setCategory] = useState("All");

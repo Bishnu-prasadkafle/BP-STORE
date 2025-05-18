@@ -1,5 +1,13 @@
 import React from "react";
-const categories = ["All", "Bags", "Shoes", "Clothing", "Perfume"];
+const categories = [
+  "All",
+  "Bags",
+  "Wearables",
+  "Shoes",
+  "Cosmetics",
+  "Perfume",
+  "Gadgets",
+];
 
 const Sidebar = ({ selected, onSelect }) => {
   return (

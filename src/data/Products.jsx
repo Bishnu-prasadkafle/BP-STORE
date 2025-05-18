@@ -1,28 +1,38 @@
+import ladyhandbag from "../assets/ladyhand.png";
+import packbag from "../assets/packbag.png";
+import bag from "../assets/bag.png";
+import watchg from "../assets/graphwatch.png";
+import glass from "../assets/glass.png";
+import bracelet from "../assets/bracelet.png";
+import cateye from "../assets/cateye.png";
+import hat from "../assets/HAT.png";
+
 export const products = [
   {
-    id: 1,
-    name: "Classic Leather Watch",
-    price: 4999,
-    image: "https://www.vecteezy.com/free-png/leather-watch",
-    category: "Watches",
+    id: 32,
+    name: "Vintage Hat",
+    price: 2100,
+    image: hat,
+    category: "Wearables",
     description:
-      "Timeless analogue watch with genuine leather strap and stainless steel case.",
+      "Step back in time and make a bold statement with this Vintage Hat, designed to capture the elegance and spirit of a bygone era.",
   },
+
   {
     id: 2,
-    name: "Sporty Digital Watch",
+    name: "Travel PackBag",
     price: 2999,
-    image: "/assets/watches/digital-watch.jpg",
-    category: "Watches",
+    image: packbag,
+    category: "Bags",
     description:
-      "Durable digital watch with stopwatch, alarm, and water-resistance up to 50m.",
+      "Whether you're heading for a weekend getaway, an international trip, or an adventurous trek, this Travel Backpack is designed to be your perfect travel companion.",
   },
   {
     id: 3,
-    name: "Smart Fitness Watch",
+    name: "Trekking Bag",
     price: 7999,
-    image: "/assets/watches/fitness-watch.jpg",
-    category: "Watches",
+    image: bag,
+    category: "Bags",
     description:
       "All-in-one fitness tracker with heart-rate monitor and sleep analysis.",
   },
@@ -30,8 +40,8 @@ export const products = [
     id: 4,
     name: "Luxury Chronograph Watch",
     price: 12999,
-    image: "/assets/watches/chronograph-watch.jpg",
-    category: "Watches",
+    image: watchg,
+    category: "Wearables",
     description:
       "Stylish chronograph with precision quartz movement and sapphire crystal.",
   },
@@ -39,26 +49,26 @@ export const products = [
     id: 5,
     name: "Aviator Sunglasses",
     price: 1599,
-    image: "/assets/glasses/aviator-sunglasses.jpg",
-    category: "Glasses",
+    image: glass,
+    category: "Wearables",
     description:
       "UV-protective aviator frames with polarized lenses for clear vision.",
   },
   {
     id: 6,
-    name: "Round Frame Glasses",
-    price: 1299,
-    image: "/assets/glasses/round-glasses.jpg",
-    category: "Glasses",
+    name: "Titanium Steel Men's Bracelet",
+    price: 2500,
+    image: bracelet,
+    category: "Wearables",
     description:
-      "Lightweight acetate round frames for everyday wear and comfort.",
+      "Elevate your style with the strength and sophistication of our Titanium Steel Men's Bracelet. Engineered for the modern man, this bracelet blends rugged masculinity with sleek design—perfect for everyday wear or special occasions.",
   },
   {
     id: 7,
     name: "Cat-Eye Sunglasses",
     price: 1899,
-    image: "/assets/glasses/cat-eye.jpg",
-    category: "Glasses",
+    image: cateye,
+    category: "Wearables",
     description:
       "Fashionable cat-eye frames with UV400 protection and gradient lenses.",
   },
@@ -274,12 +284,14 @@ export const products = [
     category: "Accessories",
     description: "Durable leather keychain holder with metal ring.",
   },
+
   {
     id: 32,
-    name: "Stylish Cap",
-    price: 799,
-    image: "/assets/accessories/cap.jpg",
-    category: "Accessories",
-    description: "Adjustable cotton cap with embroidered logo.",
+    name: "CHANEL Mini flag bag",
+    price: 9999,
+    image: ladyhandbag,
+    category: "Bags",
+    description:
+      "Timeless analogue watch with genuine leather strap and stainless steel case.",
   },
 ];
