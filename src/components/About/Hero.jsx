@@ -1,27 +1,32 @@
 import React from "react";
+import promo from "../../assets/promo.png"; // Replace with a suitable About image
+import { ArrowRight } from "lucide-react";
 
-const AboutUs = () => {
+const AboutHero = () => {
   return (
-    <div
-      className='relative bg-cover bg-center bg-no-repeat  flex items-center justify-center text-white'
-      style={{
-        backgroundImage: `url('')`,
-      }}>
-      {/* Overlay for dark effect */}
-      <div className='absolute inset-0 bg-black bg-opacity-60 z-0'></div>
+    <section className='relative bg-white py-16 px-6 sm:px-12 lg:px-20 overflow-hidden'>
+      {/* Background Image */}
+      <div className='absolute inset-0 z-0'>
+        <img
+          src={promo}
+          alt='About Background'
+          className='w-full h-full object-cover opacity-30'
+        />
+      </div>
 
-      {/* About Us Content */}
-      <div className='relative z-10 p-8 max-w-3xl text-center'>
-        <h1 className='text-4xl md:text-5xl font-bold mb-6'>About Us</h1>
-        <p className='text-lg md:text-xl leading-relaxed'>
-          Welcome to our platform! We are dedicated to providing the best
-          service and user experience. Our mission is to empower users through
-          innovative technology and reliable support. Thank you for being a part
-          of our journey.
+      {/* Content */}
+      <div className='relative z-10 max-w-4xl mx-auto text-center'>
+        <h1 className='text-4xl sm:text-5xl font-extrabold text-black leading-tight mb-6'>
+          About BP-SHOP
+        </h1>
+        <p className='text-base sm:text-lg text-gray-900 font-light mb-8'>
+          We’re more than a brand — we're a mission to bring quality,
+          innovation, and community to everything we create. Dive into our
+          journey and discover why people shop with us.
         </p>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default AboutUs;
+export default AboutHero;

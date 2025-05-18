@@ -1,4 +1,4 @@
-const products = [
+export const products = [
   {
     id: 1,
     name: "Classic Leather Watch",
@@ -283,5 +283,3 @@ const products = [
     description: "Adjustable cotton cap with embroidered logo.",
   },
 ];
-
-export default products;

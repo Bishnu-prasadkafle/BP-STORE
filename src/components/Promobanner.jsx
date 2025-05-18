@@ -3,7 +3,7 @@ import promoBg from "../assets/banner1.png"; // Adjust the path if needed
 
 const PromoBanner = () => {
   return (
-    <div className='relative h-[400px] md:h-[300px] rounded m-5 overflow-hidden'>
+    <div className='relative h-[400px] md:h-[300px] rounded m-5 '>
       {/* Background Image */}
       <img
         src={promoBg}

@@ -5,6 +5,7 @@ import OurStory from "../components/About/OurStory";
 import CompanyTimeline from "../components/About/CompanyTimeline";
 import AboutHero from "../components/About/Hero";
 import WhyShopWithUs from "../components/About/WhyShopWithUs";
+import MissionVision from "../components/About/MissionVision";
 
 function About() {
   return (
@@ -12,6 +13,7 @@ function About() {
       <div>
         <AboutHero />
         <OurStory />
+        <MissionVision />
         <CompanyTimeline />
         <WhyShopWithUs />
       </div>
