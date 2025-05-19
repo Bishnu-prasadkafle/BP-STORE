@@ -1,7 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router";
 import promoBg from "../assets/banner1.png"; // Adjust the path if needed
 
 const PromoBanner = () => {
+  const navigate = useNavigate();
   return (
     <div className='relative h-[400px] md:h-[300px] rounded m-5 '>
       {/* Background Image */}
@@ -21,7 +23,9 @@ const PromoBanner = () => {
             <span className='text-red-600'>35%</span> Off only this Friday
           </h2>
           <p className='mb-4 text-xl'>and get special gift</p>
-          <button className='bg-red-600 px-5 py-2 rounded-full text-sm font-semibold hover:bg-red-700 transition'>
+          <button
+            onClick={() => navigate("/products")}
+            className='bg-red-600 px-5 py-2 rounded-full text-sm font-semibold hover:bg-red-700 transition'>
             Grab It Now →
           </button>
         </div>

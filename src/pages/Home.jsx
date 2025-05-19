@@ -1,12 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router";
 import { ArrowRight } from "lucide-react";
 import image1 from "../assets/image1.png";
 import FeaturedProducts from "../components/ProductFeartures.";
 import PromoBanner from "../components/PromoBanner";
-import Footer from "../components/Footer";
+// import Footer from "../components/Footer";
 import UpdateProducts from "../components/UpdateProducts";
 
 function Home() {
+  const navigate = useNavigate();
   return (
     <div className='bg-white min-h-screen w-full py-10'>
       {/* Hero Section (Left + Right) */}
@@ -21,7 +23,9 @@ function Home() {
             something that makes you feel good.”
           </p>
 
-          <button className='group inline-flex items-center gap-2 text-lg bg-red-500 text-white px-6 py-3 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 ease-in-out transform hover:scale-105'>
+          <button
+            onClick={() => navigate("/products")}
+            className='group inline-flex items-center gap-2 text-lg bg-red-500 text-white px-6 py-3 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 ease-in-out transform hover:scale-105'>
             Explore Now
             <ArrowRight className='w-5 h-5 transition-transform duration-300 group-hover:translate-x-1' />
           </button>

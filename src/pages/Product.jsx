@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useSearchParams } from "react-router";
 import { products } from "../data/Products";
 import ProductCard from "../components/Product/ProductCard";
 import Sidebar from "../components/Product/Sidebar";
@@ -8,15 +9,19 @@ import Pagination from "../components/Product/Pagination";
 const PRODUCTS_PER_PAGE = 9;
 
 function Product() {
+  const [searchParams] = useSearchParams();
+  const searchQuery = searchParams.get("search")?.toLowerCase() || "";
   const [category, setCategory] = useState("All");
   const [sortBy, setSortBy] = useState("newest");
   const [currentPage, setCurrentPage] = useState(1);
 
   // Filter
-  const filtered =
-    category === "All"
-      ? products
-      : products.filter((p) => p.category === category);
+  const filtered = products.filter((p) => {
+    const matchesCategory = category === "All" || p.category === category;
+    const matchesSearch =
+      !searchQuery || p.name.toLowerCase().includes(searchQuery);
+    return matchesCategory && matchesSearch;
+  });
 
   // Sort
   const sorted = [...filtered].sort((a, b) => {
