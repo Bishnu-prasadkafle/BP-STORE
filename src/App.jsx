@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import About from "./pages/About";
 import Topbanner from "./components/Topbanner";
 import Product from "./pages/Product";
+import ProductDetails from "./pages/ProductDetails";
 
 // import Policies from "./pages/Policies";
 
@@ -18,7 +19,9 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
+
         <Route path='/products' element={<Product />} />
+        <Route path='/product/:id' element={<ProductDetails />} />
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<div>Contact</div>} />
         <Route path='/cart' element={<div>Cart</div>} />

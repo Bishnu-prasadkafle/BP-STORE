@@ -9,7 +9,7 @@ import MissionVision from "../components/About/MissionVision";
 
 function About() {
   return (
-    <div className=''>
+    <div>
       <div>
         <AboutHero />
         <OurStory />
