@@ -7,6 +7,7 @@ const categories = [
   "Cosmetics",
   "Perfume",
   "Gadgets",
+  "Others",
 ];
 
 const Sidebar = ({ selected, onSelect }) => {

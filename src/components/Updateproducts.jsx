@@ -29,9 +29,9 @@ const products = [
 
   {
     name: "Trekking Boot",
-    description: " Crafted from high-quality materials ",
     price: 22000,
     image: boot,
+    description: " Crafted from high-quality materials ",
   },
   {
     name: "Scarf",

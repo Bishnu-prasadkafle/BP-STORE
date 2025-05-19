@@ -6,10 +6,34 @@ import glass from "../assets/glass.png";
 import bracelet from "../assets/bracelet.png";
 import cateye from "../assets/cateye.png";
 import hat from "../assets/HAT.png";
+import converse from "../assets/converse.png";
+import boot from "../assets/boots1.png";
+import perfume2 from "../assets/perfume2.png";
+import perfume3 from "../assets/perfume3.png";
+import perfume4 from "../assets/perfume4.png";
+import perfume from "../assets/perfume.png";
+import cream from "../assets/cream.png";
+import serum1 from "../assets/serum1.png";
+import facewash from "../assets/face-wash1.png";
+import watch from "../assets/watch.png";
+import scarf from "../assets/scarf.png";
+import gopro from "../assets/gopro.png";
+import trekkingpole from "../assets/trekkingpole.png";
+import gel from "../assets/gel.png";
+import ring from "../assets/ring.png";
+import necklace from "../assets/necklace.png";
+import powerbank from "../assets/powerbank.png";
+import kit from "../assets/kit.png";
+import beared from "../assets/beared.png";
+import wax from "../assets/wax.png";
+import belt from "../assets/belt.png";
+import wallet from "../assets/wallet.png";
+import keychain from "../assets/keychain.png";
+import airpods from "../assets/airpods.png";
 
 export const products = [
   {
-    id: 32,
+    id: 1,
     name: "Vintage Hat",
     price: 2100,
     image: hat,
@@ -33,8 +57,7 @@ export const products = [
     price: 7999,
     image: bag,
     category: "Bags",
-    description:
-      "All-in-one fitness tracker with heart-rate monitor and sleep analysis.",
+    description: "",
   },
   {
     id: 4,
@@ -74,27 +97,27 @@ export const products = [
   },
   {
     id: 8,
-    name: "Reading Glasses",
-    price: 999,
-    image: "/assets/glasses/reading-glasses.jpg",
-    category: "Glasses",
+    name: "Converse Chuck 70 Platform Shoes Ecru US 9al",
+    price: 5400,
+    image: converse,
+    category: "Shoes",
     description:
-      "Comfortable reading frames with spring hinges and anti-glare coating.",
+      "Elevate your classic style—literally. The Converse Chuck 70 Platform Shoes in Ecru are a bold twist on the iconic Chuck Taylor, designed for those who love timeless vibes with a modern edge. Crafted with premium canvas in a soft, off-white Ecru tone, these sneakers pair perfectly with everything from casual denim to dressier streetwear looks.",
   },
   {
     id: 9,
-    name: "Eau de Parfum (100ml)",
-    price: 3499,
-    image: "/assets/perfume/edp-100ml.jpg",
-    category: "Perfume",
+    name: "Trekking Boot",
+    price: 22000,
+    image: boot,
+    category: "Shoes",
     description:
-      "Long-lasting fragrance blend of citrus top notes and woody base.",
+      "Conquer any trail with confidence in these rugged, high-performance trekking boots—built for the bold explorer. Designed to handle challenging terrain and unpredictable weather, these boots offer unmatched durability, comfort, and support whether you're scaling mountains or navigating forest trails.",
   },
   {
     id: 10,
     name: "Travel Spray Perfume (30ml)",
     price: 1499,
-    image: "/assets/perfume/travel-spray.jpg",
+    image: perfume2,
     category: "Perfume",
     description:
       "Compact, refillable spray bottle—perfect for on-the-go freshness.",
@@ -103,7 +126,7 @@ export const products = [
     id: 11,
     name: "Fragrance Body Mist (200ml)",
     price: 799,
-    image: "/assets/perfume/body-mist.jpg",
+    image: perfume3,
     category: "Perfume",
     description:
       "Light body mist with floral hints for a refreshed scent throughout the day.",
@@ -112,97 +135,93 @@ export const products = [
     id: 12,
     name: "Roll-On Perfume",
     price: 499,
-    image: "/assets/perfume/roll-on.jpg",
+    image: perfume4,
     category: "Perfume",
     description:
       "Compact roll-on fragrance for precise application and travel convenience.",
   },
   {
     id: 13,
-    name: "Herbal Hair Oil",
-    price: 799,
-    image: "/assets/hair-oil/herbal-hair-oil.jpg",
-    category: "Hair Oil",
+    name: "Veleno perfume",
+    price: 28000,
+    image: perfume,
+    category: "Perfume",
     description:
-      "Nourishing blend of coconut, amla, and hibiscus oils for healthy scalp.",
+      "The fragrance opens with a spicy and boozy blend, leading to a heart of earthy tobacco and patchouli, and settles into a sweet base of cherry and vanilla with a touch of amber.",
   },
   {
     id: 14,
-    name: "Argan Repair Hair Oil",
-    price: 999,
-    image: "/assets/hair-oil/argan-oil.jpg",
-    category: "Hair Oil",
-    description: "Pure argan oil to repair split ends and add shine.",
+    name: "Face Cream",
+    price: 5000,
+    image: cream,
+    category: "Cosmetics",
+    description: "Face toner for men and women",
   },
   {
     id: 15,
-    name: "Herbal Serum Hair Elixir",
-    price: 1199,
-    image: "/assets/hair-oil/hair-elixir.jpg",
-    category: "Hair Oil",
-    description:
-      "Concentrated serum with keratin and biotin for thicker, healthier hair.",
+    name: "Herbal Serum ",
+    price: 599,
+    image: serum1,
+    category: "Cosmetics",
+    description: "Suitable for all skin types – even sensitive skin",
   },
   {
     id: 16,
-    name: "Anti-Dandruff Scalp Treatment",
-    price: 899,
-    image: "/assets/hair-oil/scalp-treatment.jpg",
-    category: "Hair Oil",
+    name: "Men Face-Wash",
+    price: 2000,
+    image: facewash,
+    category: "Cosmetics",
     description:
-      "Soothing scalp formula with tea tree oil and peppermint for dandruff control.",
+      "Suitable for all skin types / oily / dry / sensitive / acne-prone] ",
   },
   {
     id: 17,
-    name: "Vanity Cosmetic Bag",
-    price: 1599,
-    image: "/assets/vanity/cosmetic-bag.jpg",
-    category: "Vanity",
-    description:
-      "Elegant travel pouch with multiple compartments and mirror pocket.",
+    name: "Apple Watch",
+    price: 9500,
+    image: watch,
+    category: "Wearables",
+    description: "Apple Watch (Black) – Style Meets Smart Technology",
   },
   {
     id: 18,
-    name: "Makeup Brush Set",
-    price: 2299,
-    image: "/assets/vanity/brush-set.jpg",
-    category: "Vanity",
+    name: "Scarf",
+    price: 2000,
+    image: scarf,
+    category: "Wearables",
     description:
-      "10-piece synthetic brush set with ergonomic handles for flawless application.",
+      "  handmade scarf is crafted from 100% soft, breathable cotton — perfect for year-round wear. ",
   },
   {
     id: 19,
-    name: "Compact Mirror Palette",
-    price: 699,
-    image: "/assets/vanity/mirror-palette.jpg",
-    category: "Vanity",
-    description:
-      "Foldable compact mirror with LED lights for perfect makeup touch-ups.",
+    name: "Skin Care Gel",
+    price: 2200,
+    image: gel,
+    category: "Cosmetics",
+    description: "Made In Aruba World's Finest Aloe",
   },
   {
     id: 20,
-    name: "Nail Art Kit",
-    price: 1299,
-    image: "/assets/vanity/nail-kit.jpg",
-    category: "Vanity",
-    description:
-      "Complete nail kit with brushes, polishes, and rhinestones for creative designs.",
+    name: "GoPro HERO4",
+    price: 70000,
+    image: gopro,
+    category: "Gadgets",
+    description: "Waterproof Action Camera",
   },
   {
     id: 21,
-    name: "Gold Plated Ring",
-    price: 2699,
-    image: "/assets/ornaments/ring.jpg",
-    category: "Ornaments",
-    subcategory: "Rings",
-    description: "Elegant gold-plated ring with cubic zirconia accents.",
+    name: "Trekking Pole",
+    price: 1100,
+    image: trekkingpole,
+    category: "Others",
+
+    description: "Crafted from high-quality materials",
   },
   {
     id: 22,
     name: "Silver Band Ring",
     price: 2199,
-    image: "/assets/ornaments/silver-ring.jpg",
-    category: "Ornaments",
+    image: ring,
+    category: "Wearables",
     subcategory: "Rings",
     description: "Sleek silver band with polished finish and comfort fit.",
   },
@@ -210,28 +229,27 @@ export const products = [
     id: 23,
     name: "Pearl Necklace",
     price: 4999,
-    image: "/assets/ornaments/necklace.jpg",
-    category: "Ornaments",
+    image: necklace,
+    category: "Wearables",
     subcategory: "Necklaces",
     description:
       "Classic faux-pearl strand with silver clasp—perfect for any outfit.",
   },
   {
     id: 24,
-    name: "Gemstone Pendant Necklace",
+    name: "Power Bank",
     price: 3599,
-    image: "/assets/ornaments/gemstone-necklace.jpg",
-    category: "Ornaments",
-    subcategory: "Necklaces",
+    image: powerbank,
+    category: "Gadgets",
     description:
-      "Beautiful pendant necklace with natural gemstone and adjustable chain.",
+      "a portable battery-powered device used to charge electronic gadgets such as smartphones, tablets, smartwatches, wireless earphones, cameras, and other USB-powered devices. It's a convenient backup power source, especially for people on the go, travelers, students, or professionals who need reliable charging without access to wall sockets.",
   },
   {
     id: 25,
     name: "Beard Grooming Kit",
     price: 1999,
-    image: "/assets/grooming/beard-kit.jpg",
-    category: "Men’s Grooming",
+    image: beared,
+    category: "Others",
     description:
       "Complete set: beard oil, balm, comb, and scissors for precision styling.",
   },
@@ -239,50 +257,51 @@ export const products = [
     id: 26,
     name: "Travel Shaving Set",
     price: 2499,
-    image: "/assets/grooming/shaving-set.jpg",
-    category: "Men’s Grooming",
+    image: kit,
+    category: "Others",
     description: "Compact razor, brush, and travel case—smooth shave anywhere.",
   },
   {
     id: 27,
     name: "Hair Styling Wax",
     price: 899,
-    image: "/assets/grooming/wax.jpg",
-    category: "Men’s Grooming",
+    image: wax,
+    category: "Others",
     description: "Matte finish styling wax for flexible hold and natural look.",
   },
   {
     id: 28,
-    name: "Face Wash & Scrub Combo",
-    price: 1099,
-    image: "/assets/grooming/face-wash.jpg",
-    category: "Men’s Grooming",
+    name: "Cortina Leather Belt",
+    price: 2099,
+    image: belt,
+    category: "Others",
     description:
-      "Dual-action face wash and scrub to cleanse and exfoliate skin.",
+      "Elevate your attire with the Trafalgar 30mm Cortina Leather Belt, a timeless accessory designed for the discerning gentleman. ",
   },
   {
     id: 29,
     name: "Leather Wallet",
     price: 1499,
-    image: "/assets/accessories/wallet.jpg",
-    category: "Accessories",
+    image: wallet,
+    category: "Others",
     description: "Slim bifold wallet in genuine leather with RFID protection.",
   },
   {
     id: 30,
-    name: "Stylish Belt",
-    price: 1299,
-    image: "/assets/accessories/belt.jpg",
-    category: "Accessories",
-    description: "Reversible leather belt with polished metal buckle.",
+    name: "Apple Airpods 3rd generation",
+    price: 10099,
+    image: airpods,
+    category: "Gadgets",
+    description:
+      "Utilizes dynamic head tracking to create an immersive, theater-like sound experience, adapting audio based on your head movements. ",
   },
   {
     id: 31,
     name: "Keychain Holder",
     price: 499,
-    image: "/assets/accessories/keychain.jpg",
-    category: "Accessories",
-    description: "Durable leather keychain holder with metal ring.",
+    image: keychain,
+    category: "Others",
+    description: "Durable leather & metal keychain holder with metal ring.",
   },
 
   {

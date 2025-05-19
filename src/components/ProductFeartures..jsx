@@ -34,7 +34,8 @@ const products = [
   },
   {
     name: "Veleno Perfume",
-    description: "Veleno Perfume, 100ml",
+    description:
+      "The fragrance opens with a spicy and boozy blend, leading to a heart of earthy tobacco and patchouli, and settles into a sweet base of cherry and vanilla with a touch of amber.",
     price: 28000,
     image: perfume,
   },
