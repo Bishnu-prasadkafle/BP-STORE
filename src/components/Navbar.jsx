@@ -21,8 +21,9 @@ const Navbar = () => {
             BP-SHOP
           </span>
         </Link>
-
-        <SearchBar />
+        <div className='hidden md:block'>
+          <SearchBar />
+        </div>
 
         {/* Desktop Nav & Icons */}
         <div className='hidden md:flex items-center space-x-7'>
@@ -71,6 +72,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className='md:hidden px-4 pb-4 space-y-3'>
+          <SearchBar />
           {["/", "/products", "/about", "/contact"].map((path, idx) => (
             <NavLink
               key={idx}
