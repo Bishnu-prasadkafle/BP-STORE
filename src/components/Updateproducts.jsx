@@ -3,7 +3,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 
 import trekkingpole from "../assets/trekkingpole.png";
 import gel from "../assets/Gel.png";
-// import cream from "../assets/cream.png";
+//import cream from "../assets/cream.png";
 import boot from "../assets/boots1.png";
 import scarf from "../assets/scarf.png";
 import bag from "../assets/bag.png";
