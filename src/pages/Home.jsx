@@ -5,7 +5,7 @@ import image1 from "../assets/image1.png";
 import FeaturedProducts from "../components/ProductFeartures";
 import PromoBanner from "../components/Promobanner";
 // import Footer from "../components/Footer";
-import UpdateProducts from "../components/UpdateProducts";
+import UpdateProducts from "../components/Updateproducts";
 
 function Home() {
   const navigate = useNavigate();
