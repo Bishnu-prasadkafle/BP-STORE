@@ -19,7 +19,7 @@ import watch from "../assets/watch.png";
 import scarf from "../assets/scarf.png";
 import gopro from "../assets/gopro.png";
 import trekkingpole from "../assets/trekkingpole.png";
-import gel from "../assets/gel.png";
+import gel from "../assets/Gel.png";
 import ring from "../assets/ring.png";
 import necklace from "../assets/necklace.png";
 import powerbank from "../assets/powerbank.png";
