@@ -17,8 +17,8 @@ const SearchBar = () => {
       <Search className='w-5 h-5 text-gray-500 mr-2' />
       <input
         type='text'
-        placeholder='Search Products'
-        className='outline-none h-10 w-full text-sm text-[#274354] placeholder-gray-400'
+        placeholder='shoes perfume bag'
+        className='outline-none h-10 w-full text-sm font-extralight text-[#274354] placeholder-gray-400'
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
         onKeyDown={(e) => e.key === "Enter" && handleSearch()}
