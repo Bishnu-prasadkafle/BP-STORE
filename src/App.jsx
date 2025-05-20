@@ -9,6 +9,7 @@ import About from "./pages/About";
 import Topbanner from "./components/Topbanner";
 import Product from "./pages/Product";
 import ProductDetails from "./pages/ProductDetails";
+import Contact from "./pages/Contact";
 
 // import Policies from "./pages/Policies";
 
@@ -23,7 +24,7 @@ function App() {
         <Route path='/products' element={<Product />} />
         <Route path='/product/:id' element={<ProductDetails />} />
         <Route path='/about' element={<About />} />
-        <Route path='/contact' element={<div>Contact</div>} />
+        <Route path='/contact' element={<Contact />} />
         <Route path='/cart' element={<div>Cart</div>} />
         <Route path='/account' element={<div>Account</div>} />
         {/* <Route path='/policies' element={<Policies />} /> */}
