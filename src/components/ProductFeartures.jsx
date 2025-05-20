@@ -1,11 +1,11 @@
 import React, { useRef } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import { useNavigate } from "react-router";
-import { products } from "../data/products";
+
+import { products } from "../data/Products";
+import { Link } from "react-router";
 
 const FeaturedProducts = () => {
   const scrollRef = useRef(null);
-  const navigate = useNavigate();
 
   const scroll = (direction) => {
     if (scrollRef.current) {
@@ -58,12 +58,11 @@ const FeaturedProducts = () => {
             <div className='text-red-600 font-bold text-xl mb-1'>
               NRS: {product.price.toLocaleString()}
             </div>
-
-            <button
-              onClick={() => navigate(`/products/${product.id}`)}
-              className='absolute bottom-4 right-4 w-10 h-10 rounded-full bg-red-600 text-white text-xl flex items-center justify-center'>
-              +
-            </button>
+            <Link to={`/product/${product.id}?action=buy`}>
+              <button className='absolute bottom-4 right-4 w-10 h-10 rounded-full bg-red-600 text-white text-xl flex items-center justify-center'>
+                +
+              </button>
+            </Link>
           </div>
         ))}
       </div>

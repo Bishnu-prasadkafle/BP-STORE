@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router";
 import { ArrowRight } from "lucide-react";
 import image1 from "../assets/image1.png";
-import FeaturedProducts from "../components/ProductFeartures.";
+import FeaturedProducts from "../components/ProductFeartures";
 import PromoBanner from "../components/PromoBanner";
 // import Footer from "../components/Footer";
 import UpdateProducts from "../components/UpdateProducts";
