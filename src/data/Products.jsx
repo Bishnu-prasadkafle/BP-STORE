@@ -5,7 +5,7 @@ import watchg from "../assets/graphwatch.png";
 import glass from "../assets/glass.png";
 import bracelet from "../assets/bracelet.png";
 import cateye from "../assets/cateye.png";
-import hat from "../assets/HAT.png";
+import hat from "../assets/Hat.png";
 import converse from "../assets/converse.png";
 import boot from "../assets/boots1.png";
 import perfume2 from "../assets/perfume2.png";
