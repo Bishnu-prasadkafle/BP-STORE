@@ -57,7 +57,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Search */}
-      <div className='md:hidden px-4 pb-3'>
+      {/* <div className='md:hidden px-4 pb-3'>
         <div className='bg-white flex items-center rounded-full shadow px-4 py-2 w-full'>
           <Search className='w-4 h-4 text-gray-500 mr-2' />
           <input
@@ -66,7 +66,7 @@ const Navbar = () => {
             className='outline-none w-full text-sm text-[#274354]'
           />
         </div>
-      </div>
+      </div> */}
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
