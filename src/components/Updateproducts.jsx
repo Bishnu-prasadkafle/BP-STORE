@@ -1,61 +1,66 @@
 import React, { useRef } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import { products } from "../data/Products";
+import { Link } from "react-router-dom";
 
-import trekkingpole from "../assets/trekkingpole.png";
-import gel from "../assets/Gel.png";
-//import cream from "../assets/cream.png";
-import boot from "../assets/boots1.png";
-import scarf from "../assets/scarf.png";
-import bag from "../assets/bag.png";
-import serum from "../assets/serum1.png";
+// import trekkingpole from "../assets/trekkingpole.png";
+// import gel from "../assets/Gel.png";
+// //import cream from "../assets/cream.png";
+// import boot from "../assets/boots1.png";
+// import scarf from "../assets/scarf.png";
+// import bag from "../assets/bag.png";
+// import serum from "../assets/serum1.png";
 // import watch from "../assets/watch.png";
 // import facewash from "../assets/face-wash1.png";
 // import bracelet from "../assets/bracelet.png";
 
-const products = [
-  {
-    name: "Treeking Pole",
-    description: "Adjustable Lightweight Trekking Poles ",
-    price: 1100,
-    image: trekkingpole,
-  },
+// const products = [
+//   {
+//     name: "Treeking Pole",
+//     description: "Adjustable Lightweight Trekking Poles ",
+//     price: 1100,
+//     image: trekkingpole,
+//   },
 
-  {
-    name: "Skin Care Gel",
-    description: "Made In Aruba World's Finest Aloe",
-    price: 2200,
-    image: gel,
-  },
+//   {
+//     name: "Skin Care Gel",
+//     description: "Made In Aruba World's Finest Aloe",
+//     price: 2200,
+//     image: gel,
+//   },
 
-  {
-    name: "Trekking Boot",
-    price: 22000,
-    image: boot,
-    description: " Crafted from high-quality materials ",
-  },
-  {
-    name: "Scarf",
-    description:
-      "  handmade scarf is crafted from 100% soft, breathable cotton — perfect for year-round wear. ",
-    price: 2000,
-    image: scarf,
-  },
-  {
-    name: "Trekking Bag",
-    description: "",
-    price: 6800,
-    image: bag,
-  },
-  {
-    name: "Serum",
-    description: ".........",
-    price: 1800,
-    image: serum,
-  },
-];
+//   {
+//     name: "Trekking Boot",
+//     price: 22000,
+//     image: boot,
+//     description: " Crafted from high-quality materials ",
+//   },
+//   {
+//     name: "Scarf",
+//     description:
+//       "  handmade scarf is crafted from 100% soft, breathable cotton — perfect for year-round wear. ",
+//     price: 2000,
+//     image: scarf,
+//   },
+//   {
+//     name: "Trekking Bag",
+//     description: "",
+//     price: 6800,
+//     image: bag,
+//   },
+//   {
+//     name: "Serum",
+//     description: ".........",
+//     price: 1800,
+//     image: serum,
+//   },
+// ];
 
 function Updateproducts() {
   const scrollRef = useRef(null);
+  const featuredProducts = products
+    .filter((p) => p.feature === "latest")
+    .slice(0, 8);
 
   const scroll = (direction) => {
     if (scrollRef.current) {
@@ -92,7 +97,7 @@ function Updateproducts() {
       <div
         ref={scrollRef}
         className='flex flex-row overflow-x-auto space-x-6 scrollbar-hide px-4'>
-        {products.map((product, index) => (
+        {featuredProducts.map((product, index) => (
           <div
             key={index}
             className='w-80 flex-shrink-0 rounded-xl shadow-md p-4 bg-white relative transition-transform duration-300 hover:scale-105'>
@@ -104,13 +109,15 @@ function Updateproducts() {
             <h3 className='text-lg font-semibold text-gray-900 mb-1'>
               {product.name}
             </h3>
-            <p className='text-gray-500 text-sm mb-2'>{product.description}</p>
+            {/* <p className='text-gray-500 text-sm mb-2'>{product.description}</p> */}
             <div className='text-red-600 font-bold text-xl mb-1'>
               NRS: {product.price.toLocaleString()}
             </div>
-            <button className='absolute bottom-4 right-4 w-10 h-10 rounded-full bg-red-600 text-white text-xl flex items-center justify-center'>
-              +
-            </button>
+            <Link to={`/product/${product.id}?action=buy`}>
+              <button className='absolute bottom-4 right-4 w-10 h-10 rounded-full bg-red-600 text-white text-xl flex items-center justify-center'>
+                +
+              </button>
+            </Link>
           </div>
         ))}
       </div>

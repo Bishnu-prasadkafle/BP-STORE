@@ -30,6 +30,16 @@ import belt from "../assets/belt.png";
 import wallet from "../assets/wallet.png";
 import keychain from "../assets/keychain.png";
 import airpods from "../assets/airpods.png";
+import denimhat from "../assets/denimhat.png";
+import running from "../assets/runningshoes.png";
+import laptopstand from "../assets/laptopstand.png";
+import shoulderbag from "../assets/shoulderbag.png";
+import wbelt from "../assets/wbelt.png";
+import scale from "../assets/scale.png";
+import tripod from "../assets/tripod.png";
+import scrub from "../assets/scrub.png";
+import fedora from "../assets/fedora.png";
+import ncream from "../assets/ncream.png";
 
 export const products = [
   {
@@ -38,6 +48,7 @@ export const products = [
     price: 2100,
     image: hat,
     category: "Wearables",
+    feature: "latest",
     description:
       "Step gray in time and make a bold statement with this Vintage Hat, designed to capture the elegance and spirit of a bygone era.",
   },
@@ -58,6 +69,7 @@ export const products = [
     image: bag,
     category: "Bags",
     description: "",
+    feature: "latest",
   },
   {
     id: 4,
@@ -188,6 +200,7 @@ export const products = [
     price: 2000,
     image: scarf,
     category: "Wearables",
+    feature: "latest",
     description:
       "  handmade scarf is crafted from 100% soft, breathable cotton — perfect for year-round wear. ",
   },
@@ -241,6 +254,7 @@ export const products = [
     price: 3599,
     image: powerbank,
     category: "Gadgets",
+    feature: "latest",
     description:
       "a portable battery-powered device used to charge electronic gadgets such as smartphones, tablets, smartwatches, wireless earphones, cameras, and other USB-powered devices. It's a convenient backup power source, especially for people on the go, travelers, students, or professionals who need reliable charging without access to wall sockets.",
   },
@@ -267,6 +281,7 @@ export const products = [
     price: 899,
     image: wax,
     category: "Others",
+    feature: "latest",
     description: "Matte finish styling wax for flexible hold and natural look.",
   },
   {
@@ -310,7 +325,95 @@ export const products = [
     price: 9999,
     image: ladyhandbag,
     category: "Bags",
+    feature: "latest",
     description:
       "Timeless analogue watch with genuine leather strap and stainless steel case.",
+  },
+  {
+    id: 33,
+    name: "Denim Bucket Hat",
+    price: 1399,
+    image: denimhat,
+    category: "Wearables",
+    description:
+      "Stylish denim bucket hat—perfect for casual and streetwear looks.",
+  },
+  {
+    id: 35,
+    name: "Running Shoes",
+    price: 6500,
+    image: running,
+    category: "Shoes",
+    description:
+      "Breathable lightweight shoes designed for maximum performance.",
+  },
+  {
+    id: 36,
+    name: "Adjustable Laptop Stand",
+    price: 2599,
+    image: laptopstand,
+    category: "Gadgets",
+    description: "Portable and ergonomic laptop stand with cooling support.",
+  },
+  {
+    id: 37,
+    name: "Canvas Shoulder Bag",
+    price: 2300,
+    image: shoulderbag,
+    category: "Bags",
+    feature: "latest",
+    description: "Stylish canvas bag ideal for casual outings.",
+  },
+  {
+    id: 38,
+    name: "Woven Belt",
+    price: 1399,
+    image: wbelt,
+    category: "Others",
+    description: "Stretchable belt with leather accents for a snug fit.",
+  },
+  {
+    id: 39,
+    name: "Digital Travel Scale",
+    price: 1599,
+    image: scale,
+    category: "Gadgets",
+    description:
+      "Avoid excess baggage fees with this lightweight digital scale.",
+  },
+  {
+    id: 40,
+    name: "Mini Tripod Stand",
+    price: 1099,
+    image: tripod,
+    category: "Gadgets",
+    description: "Flexible tripod stand for smartphones and compact cameras.",
+  },
+  {
+    id: 41,
+    name: "Body Scrub",
+    price: 899,
+    image: scrub,
+    category: "Cosmetics",
+    description: "Exfoliating body scrub with natural sea salt and almond oil.",
+  },
+  {
+    id: 42,
+    name: "Classic Fedora",
+    price: 2200,
+    image: fedora,
+    category: "Wearables",
+    feature: "latest",
+    description:
+      "Stylish felt fedora with ribbon detail—ideal for urban fashion.",
+  },
+
+  {
+    id: 43,
+    name: "Night Repair Cream",
+    price: 2700,
+    image: ncream,
+    category: "Cosmetics",
+    description: "Overnight repair cream to hydrate and rejuvenate skin.",
   },
 ];
