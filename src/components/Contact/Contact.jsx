@@ -44,7 +44,7 @@ const Contact = () => {
   };
 
   return (
-    <div className='min-h-screen bg-gradient-to-br from-white to-gray-100 dark:from-[#1a1a1a] dark:to-[#0f0f0f] px-10 py-10 text-gray-900 dark:text-white'>
+    <div className='min-h-screen bg-gradient-to-br from-white to-gray-100 px-10 py-10 text-gray-900 dark:text-white'>
       <div className='max-w-7xl mx-auto'>
         <h2 className='text-4xl font-bold mb-10 text-center'>
           📬 Get in
