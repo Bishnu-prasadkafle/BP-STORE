@@ -39,7 +39,7 @@ export const products = [
     image: hat,
     category: "Wearables",
     description:
-      "Step back in time and make a bold statement with this Vintage Hat, designed to capture the elegance and spirit of a bygone era.",
+      "Step black in time and make a bold statement with this Vintage Hat, designed to capture the elegance and spirit of a bygone era.",
   },
 
   {
