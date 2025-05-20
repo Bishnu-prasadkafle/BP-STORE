@@ -52,9 +52,9 @@ const FeaturedProducts = () => {
             <h3 className='text-lg font-semibold text-gray-900 mb-1'>
               {product.name}
             </h3>
-            <p className='text-gray-500 overflow-ellipsis text-sm mb-2'>
+            {/* <p className='text-gray-500 overflow-ellipsis text-sm mb-2'>
               {product.description}
-            </p>
+            </p> */}
             <div className='text-red-600 font-bold text-xl mb-1'>
               NRS: {product.price.toLocaleString()}
             </div>
