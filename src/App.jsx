@@ -12,6 +12,8 @@ import ProductDetails from "./pages/ProductDetails";
 import Contact from "./pages/Contact";
 import Account from "./pages/Account";
 import Policies from "./pages/Policies";
+// import ProtectedRoute from "./components/Account/ProtectedRoute";
+// import MyAccount from "./components/Account/MyAccount";
 
 function App() {
   return (
@@ -19,6 +21,14 @@ function App() {
       <Topbanner />
       <Navbar />
       <Routes>
+        {/* <Route
+          path=''
+          element={
+            <ProtectedRoute>
+              <Home />
+            </ProtectedRoute>
+          }
+        /> */}
         <Route path='/' element={<Home />} />
 
         <Route path='/products' element={<Product />} />
@@ -26,6 +36,9 @@ function App() {
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/cart' element={<div>Cart</div>} />
+        <Route path='/login' element={<Account />} />
+        <Route path='/signup' element={<Account />} />
+
         <Route path='/account' element={<Account />} />
         <Route path='/policies' element={<Policies />} />
       </Routes>

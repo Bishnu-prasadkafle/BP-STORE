@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useNavigate, useSearchParams } from "react-router-dom";
 
 import LoginForm from "../components/Account/LoginForm";
 import SignupForm from "../components/Account/SignupForm";
@@ -8,7 +8,10 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Account = () => {
-  const [view, setView] = useState("login");
+  const [searchParams] = useSearchParams();
+  const initialView = searchParams.get("view") || "login";
+
+  const [view, setView] = useState(initialView);
   const navigate = useNavigate();
 
   const handleLogin = () => {
@@ -18,9 +21,13 @@ const Account = () => {
   const renderView = () => {
     if (view === "signup")
       return <SignupForm onSignup={() => setView("login")} setView={setView} />;
-    if (view === "forgot") return <ForgotPassword />;
+    if (view === "forgot") return <ForgotPassword setView={setView} />;
     return <LoginForm onLogin={handleLogin} setView={setView} />;
   };
+
+  useEffect(() => {
+    setView(initialView);
+  }, [initialView]);
 
   return (
     <div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-white to-gray-100 dark:from-[#1a1a1a] dark:to-[#0f0f0f] px-4 py-10 text-gray-900 dark:text-white'>

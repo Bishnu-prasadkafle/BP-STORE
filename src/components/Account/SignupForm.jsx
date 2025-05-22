@@ -1,87 +1,113 @@
+// ✅ SignupForm.jsx
 import React, { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
 import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-const SignupForm = ({ onSignup }) => {
+const SignupForm = () => {
   const [formData, setFormData] = useState({
+    name: "",
     email: "",
     password: "",
     confirmPassword: "",
-    accepted: false,
   });
+  const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: type === "checkbox" ? checked : value,
-    }));
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const { email, password, confirmPassword, accepted } = formData;
+    navigate("/login");
+    const { name, email, password, confirmPassword } = formData;
 
-    if (!email || !password || !confirmPassword) {
-      toast.error("Please fill in all fields");
-      return;
+    if (!name || !email || !password || !confirmPassword) {
+      return toast.error("Please fill all fields");
     }
-
     if (password !== confirmPassword) {
-      toast.error("Passwords do not match");
-      return;
+      return toast.error("Passwords do not match");
     }
 
-    if (!accepted) {
-      toast.error("Please accept the Terms & Policies");
-      return;
-    }
+    const users = JSON.parse(localStorage.getItem("bp_users")) || [];
+    const userExists = users.find((user) => user.email === email);
+    if (userExists) return toast.error("User already exists");
 
-    toast.success("Signed up successfully");
-    onSignup();
+    const updatedUsers = [...users, { name, email, password }];
+    localStorage.setItem("bp_users", JSON.stringify(updatedUsers));
+    toast.success("Signup successful! Please login.");
+    navigate("/login");
   };
 
   return (
-    <form onSubmit={handleSubmit} className='space-y-4'>
-      <input
-        type='email'
-        name='email'
-        placeholder='Email'
-        value={formData.email}
-        onChange={handleChange}
-        className='w-full p-2 border-b border-red-600 bg-transparent focus:outline-none'
-      />
-      <input
-        type='password'
-        name='password'
-        placeholder='Password'
-        value={formData.password}
-        onChange={handleChange}
-        className='w-full p-2 border-b border-red-600 bg-transparent focus:outline-none'
-      />
-      <input
-        type='password'
-        name='confirmPassword'
-        placeholder='Confirm Password'
-        value={formData.confirmPassword}
-        onChange={handleChange}
-        className='w-full p-2 border-b border-red-600 bg-transparent focus:outline-none'
-      />
-      <label className='inline-flex items-center'>
+    <div className='max-w-md mx-auto mt-10 bg-white p-6 rounded shadow'>
+      <h2 className='text-2xl font-bold mb-4 text-center'>Sign Up</h2>
+      <form onSubmit={handleSubmit}>
         <input
-          type='checkbox'
-          name='accepted'
-          checked={formData.accepted}
+          type='text'
+          name='name'
+          placeholder='Full Name'
+          className='w-full p-2 border mb-3 rounded'
           onChange={handleChange}
-          className='mr-2'
+          value={formData.name}
         />
-        I accept Terms & Policies
-      </label>
-      <button
-        type='submit'
-        className='bg-red-600 text-white px-4 py-2 rounded-full hover:bg-red-700 ml-4'>
-        Sign Up
-      </button>
-    </form>
+        <input
+          type='email'
+          name='email'
+          placeholder='Email'
+          className='w-full p-2 border mb-3 rounded'
+          onChange={handleChange}
+          value={formData.email}
+        />
+        <div className='relative'>
+          <input
+            type={showPassword ? "text" : "password"}
+            name='password'
+            placeholder='Password'
+            className='w-full p-2 border mb-3 rounded'
+            onChange={handleChange}
+            value={formData.password}
+          />
+          <span
+            onClick={() => setShowPassword(!showPassword)}
+            className='absolute right-3 top-2 cursor-pointer text-sm text-blue-600'>
+            {showPassword ? "Hide" : "Show"}
+          </span>
+        </div>
+        <input
+          type='password'
+          name='confirmPassword'
+          placeholder='Confirm Password'
+          className='w-full p-2 border mb-4 rounded'
+          onChange={handleChange}
+          value={formData.confirmPassword}
+        />
+
+        <label className='flex items-center text-sm mb-4'>
+          <input type='checkbox' required className='mr-2' /> I agree to the
+          Terms & Conditions
+        </label>
+
+        <button
+          type='submit'
+          className='w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded'>
+          Sign Up
+        </button>
+
+        {/* <Link
+          to='/login'
+          className='w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded'>
+          Sign up
+        </Link> */}
+      </form>
+      <p className='text-center text-sm mt-4'>
+        Already have an account?{" "}
+        <Link to='/login' className='text-blue-600'>
+          Login here
+        </Link>
+      </p>
+    </div>
   );
 };
 
