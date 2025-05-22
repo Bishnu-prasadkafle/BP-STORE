@@ -97,13 +97,13 @@ const Footer = () => {
           </div>
 
           {/* Toggle Button */}
-          <button
+          {/* <button
             onClick={togglePolicy}
             className='text-sm underline hover:text-red-400 mt-4'>
             {showPolicy ? "Hide Terms & Policies" : "View Terms & Policies"}
-          </button>
-
-          {/* Policy Content */}
+          </button> */}
+          {/* 
+          Policy Content
           {showPolicy && (
             <div className='mt-4 text-xs text-gray-300 space-y-2 max-h-40 overflow-y-auto'>
               <p>
@@ -119,7 +119,9 @@ const Footer = () => {
                 bpshopaccessories@gmail.com
               </p>
             </div>
-          )}
+          )} */}
+
+          <Link to={"/Policies"}>Terms and Conditions</Link>
         </div>
       </div>
 
