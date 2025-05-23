@@ -21,14 +21,6 @@ function App() {
       <Topbanner />
       <Navbar />
       <Routes>
-        {/* <Route
-          path=''
-          element={
-            <ProtectedRoute>
-              <Home />
-            </ProtectedRoute>
-          }
-        /> */}
         <Route path='/' element={<Home />} />
 
         <Route path='/products' element={<Product />} />
@@ -36,10 +28,8 @@ function App() {
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/cart' element={<div>Cart</div>} />
-        <Route path='/login' element={<Account />} />
-        <Route path='/signup' element={<Account />} />
-
         <Route path='/account' element={<Account />} />
+
         <Route path='/policies' element={<Policies />} />
       </Routes>
       <Footer />

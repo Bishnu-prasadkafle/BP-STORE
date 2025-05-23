@@ -1,10 +1,9 @@
-// ✅ SignupForm.jsx
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const SignupForm = () => {
+const SignupForm = ({ onSignup }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -20,7 +19,7 @@ const SignupForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate("/login");
+    // navigate("/");
     const { name, email, password, confirmPassword } = formData;
 
     if (!name || !email || !password || !confirmPassword) {
@@ -36,8 +35,8 @@ const SignupForm = () => {
 
     const updatedUsers = [...users, { name, email, password }];
     localStorage.setItem("bp_users", JSON.stringify(updatedUsers));
-    toast.success("Signup successful! Please login.");
-    navigate("/login");
+    toast.success("Signup successful!.");
+    navigate("/account");
   };
 
   return (
@@ -89,21 +88,15 @@ const SignupForm = () => {
           Terms & Conditions
         </label>
 
-        <button
-          type='submit'
-          className='w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded'>
-          Sign Up
-        </button>
-
-        {/* <Link
-          to='/login'
+        <Link
+          to='/account?view=login'
           className='w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded'>
           Sign up
-        </Link> */}
+        </Link>
       </form>
       <p className='text-center text-sm mt-4'>
         Already have an account?{" "}
-        <Link to='/login' className='text-blue-600'>
+        <Link to='/account?view=login' className='text-blue-600'>
           Login here
         </Link>
       </p>

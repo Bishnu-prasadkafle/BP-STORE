@@ -21,6 +21,8 @@ const Account = () => {
   const renderView = () => {
     if (view === "signup")
       return <SignupForm onSignup={() => setView("login")} setView={setView} />;
+    if (view === "login")
+      return <LoginForm onLogin={() => setView("login")} setView={setView} />;
     if (view === "forgot") return <ForgotPassword setView={setView} />;
     return <LoginForm onLogin={handleLogin} setView={setView} />;
   };

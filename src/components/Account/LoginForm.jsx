@@ -30,7 +30,7 @@ const LoginForm = () => {
     // Login success
     login(foundUser); // Save to context
     toast.success(`Welcome back, ${foundUser.name}!`);
-    navigate("/home");
+    navigate("/");
   };
 
   return (
@@ -74,7 +74,7 @@ const LoginForm = () => {
 
       <p className='mt-4 text-center text-gray-600'>
         Don't have an account?{" "}
-        <Link to='/signup' className='text-red-600 hover:underline'>
+        <Link to='/account' className='text-red-600 hover:underline'>
           Sign up
         </Link>
       </p>

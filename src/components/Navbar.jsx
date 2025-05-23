@@ -13,7 +13,7 @@ const Navbar = () => {
 
   const handleLogOut = () => {
     logout();
-    navigate("/login");
+    navigate("/account");
   };
 
   const navLinks = [
@@ -101,7 +101,7 @@ const Navbar = () => {
               )}
             </div>
           ) : (
-            <Link to='/login?view=login' title='Login'>
+            <Link to='/account' title='Login'>
               <User className='w-6 h-6 text-white bg-[#274354] p-1 rounded-full hover:scale-105 transition' />
             </Link>
           )}
@@ -143,7 +143,7 @@ const Navbar = () => {
                 <User className='w-6 h-6 text-white bg-red-500 p-1 rounded-full' />
               </button>
             ) : (
-              <Link to='/login'>
+              <Link to='/account'>
                 <User className='w-6 h-6 text-white bg-[#274354] p-1 rounded-full' />
               </Link>
             )}
