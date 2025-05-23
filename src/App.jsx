@@ -10,8 +10,9 @@ import Topbanner from "./components/Topbanner";
 import Product from "./pages/Product";
 import ProductDetails from "./pages/ProductDetails";
 import Contact from "./pages/Contact";
-import Account from "./pages/Account";
 import Policies from "./pages/Policies";
+import Account from "./pages/Account";
+import Cart from "./pages/Cart";
 // import ProtectedRoute from "./components/Account/ProtectedRoute";
 // import MyAccount from "./components/Account/MyAccount";
 
@@ -27,7 +28,7 @@ function App() {
         <Route path='/product/:id' element={<ProductDetails />} />
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
-        <Route path='/cart' element={<div>Cart</div>} />
+        <Route path='/cart' element={<Cart />} />
         <Route path='/account' element={<Account />} />
 
         <Route path='/policies' element={<Policies />} />
