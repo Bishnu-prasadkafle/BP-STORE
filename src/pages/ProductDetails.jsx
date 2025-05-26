@@ -1,121 +1,132 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Link, useParams, useLocation } from "react-router-dom";
+// import React, { useState } from "react";
+// import { useParams } from "react-router-dom";
+// import { products } from "../data/Products";
+// import { useDispatch } from "react-redux";
+// import { addToCart } from "../features/cart/CartSlice";
+// import { toast } from "react-toastify";
+
+// const ProductDetails = () => {
+//   const { id } = useParams();
+//   const productId = Number(id);
+//   // const product = products.find((p) => p.id.toString() === id);
+//   const product = products.find((p) => p.id === productId);
+//   const dispatch = useDispatch();
+//   const [quantity, setQuantity] = useState(1);
+
+//   if (!product)
+//     return (
+//       <div className='text-center mt-10 text-red-600'>Product not found.</div>
+//     );
+
+//   const handleAddToCart = () => {
+//     dispatch(addToCart({ ...product, quantity, id: product.id.toString }));
+//     toast.success("Successfully added to cart!");
+//   };
+
+//   return (
+//     <div className='max-w-4xl mx-auto p-6 '>
+//       <div className='flex flex-col md:flex-row gap-8'>
+//         <img
+//           src={product.image}
+//           alt={product.name}
+//           className='w-full md:w-1/2 object-contain rounded shadow'
+//         />
+//         <div className='md:w-1/2 flex flex-col justify-between'>
+//           <div>
+//             <h1 className='text-3xl font-bold mb-4'>{product.name}</h1>
+//             <p className='text-red-600 text-2xl font-semibold mb-6'>
+//               Rs. {product.price}
+//             </p>
+//             <p className='text-gray-700 mb-6'>{product.description}</p>
+//           </div>
+//           <div>
+//             <div className='flex items-center mb-4 space-x-4'>
+//               <button
+//                 onClick={() => setQuantity((q) => Math.max(1, q - 1))}
+//                 className='bg-gray-300 hover:bg-gray-400 px-3 py-1 rounded'>
+//                 -
+//               </button>
+//               <span className='text-xl'>{quantity}</span>
+//               <button
+//                 onClick={() => setQuantity((q) => q + 1)}
+//                 className='bg-gray-300 hover:bg-gray-400 px-3 py-1 rounded'>
+//                 +
+//               </button>
+//             </div>
+//             <button
+//               onClick={handleAddToCart}
+//               className='bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded transition'>
+//               Add to Cart
+//             </button>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default ProductDetails;
+import React, { useState } from "react";
+import { useParams } from "react-router-dom";
 import { products } from "../data/Products";
-// import FeaturedProducts from "../components/ProductFeartures.";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../features/cart/CartSlice";
+import { toast } from "react-toastify";
 
 const ProductDetails = () => {
   const { id } = useParams();
-  const location = useLocation();
-  const product = products.find((p) => p.id.toString() === id);
+  const productId = Number(id);
+  const product = products.find((p) => p.id === productId);
+  const dispatch = useDispatch();
   const [quantity, setQuantity] = useState(1);
-  const cartRef = useRef(null);
-
-  useEffect(() => {
-    const params = new URLSearchParams(location.search);
-    const action = params.get("action");
-
-    if (action === "buy" && cartRef.current) {
-      cartRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [location]);
 
   if (!product) {
     return (
-      <div className='text-center text-red-600 mt-10'>Product not found.</div>
+      <div className='text-center mt-10 text-red-600'>Product not found.</div>
     );
   }
 
-  const relatedProducts = products
-    .filter((p) => p.id !== product.id)
-    .slice(0, 4);
+  const handleAddToCart = () => {
+    dispatch(addToCart({ ...product, quantity }));
+    toast.success("Successfully added to cart!");
+  };
 
   return (
-    <div className='max-w-6xl mx-auto p-6'>
-      {/* Product Details */}
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-8 items-start'>
-        {/* Left Column: Main Image + Thumbnails */}
-        <div>
-          <img
-            src={product.image}
-            alt={product.name}
-            className='w-full max-h-[400px] object-contain rounded mb-4'
-          />
-
-          {/* Small Similar Product Thumbnails */}
-          <div className='flex gap-2 flex-wrap'>
-            {relatedProducts.map((relProd) => (
-              <Link key={relProd.id} to={`/product/${relProd.id}`}>
-                <img
-                  src={relProd.image}
-                  alt={relProd.name}
-                  className='h-16 w-16 object-contain border p-1 rounded hover:scale-105 transition'
-                />
-              </Link>
-            ))}
+    <div className='max-w-4xl mx-auto p-6'>
+      <div className='flex flex-col md:flex-row gap-8'>
+        <img
+          src={product.image}
+          alt={product.name}
+          className='w-full md:w-1/2 object-contain rounded shadow'
+        />
+        <div className='md:w-1/2 flex flex-col justify-between'>
+          <div>
+            <h1 className='text-3xl font-bold mb-4'>{product.name}</h1>
+            <p className='text-red-600 text-2xl font-semibold mb-6'>
+              Rs. {product.price}
+            </p>
+            <p className='text-gray-700 mb-6'>{product.description}</p>
           </div>
-        </div>
-
-        {/* Right Column: Product Info */}
-        <div>
-          <h1 className='text-2xl font-bold mb-2'>{product.name}</h1>
-          <p className='text-red-600 text-xl font-semibold mb-4'>
-            Rs. {product.price}
-          </p>
-          <p className='text-gray-600 mb-4'>
-            {product.description || "No description available."}
-          </p>
-
-          <select className='border p-2 rounded mb-4 w-full max-w-xs'>
-            <option>Select Size</option>
-            <option>S</option>
-            <option>M</option>
-            <option>L</option>
-          </select>
-
-          {/* Add to Cart Section */}
-          <div ref={cartRef} className='flex items-center space-x-4 mb-4'>
-            <div className='flex items-center border rounded px-3 py-1'>
+          <div>
+            <div className='flex items-center mb-4 space-x-4'>
               <button
-                onClick={() => setQuantity((prev) => Math.max(prev - 1, 1))}
-                className='text-xl px-2 hover:text-red-600'>
+                onClick={() => setQuantity((q) => Math.max(1, q - 1))}
+                className='bg-gray-300 hover:bg-gray-400 px-3 py-1 rounded'>
                 -
               </button>
-              <span className='px-3'>{quantity}</span>
+              <span className='text-xl'>{quantity}</span>
               <button
-                onClick={() => setQuantity((prev) => prev + 1)}
-                className='text-xl px-2 hover:text-green-600'>
+                onClick={() => setQuantity((q) => q + 1)}
+                className='bg-gray-300 hover:bg-gray-400 px-3 py-1 rounded'>
                 +
               </button>
             </div>
-            <button className='bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600'>
+            <button
+              onClick={handleAddToCart}
+              className='bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded transition'>
               Add to Cart
             </button>
           </div>
-        </div>
-      </div>
-
-      {/* Similar Products Section */}
-      <div className='mt-12'>
-        <h2 className='text-xl font-semibold mb-4'>Similar Products</h2>
-        <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>
-          {relatedProducts.map((item) => (
-            <div
-              key={item.id}
-              className='border rounded shadow p-4 flex flex-col items-center'>
-              <img
-                src={item.image}
-                alt={item.name}
-                className='h-28 object-contain mb-2'
-              />
-              <h3 className='text-sm font-semibold text-center'>{item.name}</h3>
-              <p className='text-red-500 font-bold mt-1'>Rs. {item.price}</p>
-              <Link
-                to={`/product/${item.id}?action=buy`}
-                className='mt-3 bg-red-500 text-white text-sm px-3 py-1 rounded hover:bg-red-600'>
-                Buy Now
-              </Link>
-            </div>
-          ))}
         </div>
       </div>
     </div>

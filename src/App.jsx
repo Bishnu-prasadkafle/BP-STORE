@@ -1,6 +1,8 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 // import { HomeIcon } from "lucide-react";
 import Home from "./pages/Home";
@@ -13,6 +15,7 @@ import Contact from "./pages/Contact";
 import Policies from "./pages/Policies";
 import Account from "./pages/Account";
 import Cart from "./pages/Cart";
+
 // import ProtectedRoute from "./components/Account/ProtectedRoute";
 // import MyAccount from "./components/Account/MyAccount";
 
@@ -34,6 +37,17 @@ function App() {
         <Route path='/policies' element={<Policies />} />
       </Routes>
       <Footer />
+      {/* ✅ ToastContainer added here */}
+      <ToastContainer
+        position='top-right'
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop
+        closeOnClick
+        pauseOnHover
+        draggable
+        theme='colored'
+      />
     </>
   );
 }
