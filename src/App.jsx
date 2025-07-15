@@ -8,13 +8,14 @@ import "react-toastify/dist/ReactToastify.css";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import About from "./pages/About";
-import Topbanner from "./components/Topbanner";
+
 import Product from "./pages/Product";
 import ProductDetails from "./pages/ProductDetails";
 import Contact from "./pages/Contact";
 import Policies from "./pages/Policies";
 import Account from "./pages/Account";
 import Cart from "./pages/Cart";
+import HeroSection1 from "./components/Herosection1";
 
 // import ProtectedRoute from "./components/Account/ProtectedRoute";
 // import MyAccount from "./components/Account/MyAccount";
@@ -22,10 +23,10 @@ import Cart from "./pages/Cart";
 function App() {
   return (
     <>
-      <Topbanner />
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/herosection' element={<HeroSection1 />} />
 
         <Route path='/products' element={<Product />} />
         <Route path='/product/:id' element={<ProductDetails />} />
@@ -37,6 +38,7 @@ function App() {
         <Route path='/policies' element={<Policies />} />
       </Routes>
       <Footer />
+
       {/* ✅ ToastContainer added here */}
       <ToastContainer
         position='top-right'

@@ -6,44 +6,38 @@ import FeaturedProducts from "../components/ProductFeartures";
 import PromoBanner from "../components/Promobanner";
 // import Footer from "../components/Footer";
 import UpdateProducts from "../components/Updateproducts";
+import HeroSection from "../components/Herosection1";
+
+import ShopBanner from "../components/ShopBanner";
+import TrustedAffiliations from "../components/TrustedAffilation";
+import TopTrekkingDestinations from "../components/TopTrekkiigDestinations";
+import TripOfTheSeason from "../components/TripOfTheSeason";
+import TestimonialsSection from "../components/TestimonialsSection";
 
 function Home() {
   const navigate = useNavigate();
   return (
-    <div className='bg-white min-h-screen w-full py-10'>
-      {/* Hero Section (Left + Right) */}
-      <div className='flex flex-col-reverse lg:flex-row items-center justify-between px-15'>
-        {/* Left Content */}
-        <div className='max-w-xl mt-10 lg:mt-0'>
-          <h1 className='font-extrabold text-4xl sm:text-5xl text-black leading-tight mb-4'>
-            Shop Smarter, Not Harder!
-          </h1>
-          <p className='font-light text-gray-600 text-base sm:text-lg mb-6'>
-            “Shopping isn't just about buying things — it's about discovering
-            something that makes you feel good.”
-          </p>
-
-          <button
-            onClick={() => navigate("/products")}
-            className='group inline-flex items-center gap-2 text-lg bg-red-500 text-white px-6 py-3 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 ease-in-out transform hover:scale-105'>
-            Explore Now
-            <ArrowRight className='w-5 h-5 transition-transform duration-300 group-hover:translate-x-1' />
-          </button>
-        </div>
-
-        {/* Right Image */}
-        <div className='mb-10 lg:mb-0 lg:w-1/2'>
-          <img
-            src={image1}
-            alt='Shop'
-            className='w-full max-w-md mx-auto transition-transform duration-500 hover:scale-105'
-          />
-        </div>
-      </div>
-      <hr />
-
-      {/* Featured Section */}
+    <div>
       <div>
+        <HeroSection />
+      </div>
+      <div>
+        <TopTrekkingDestinations />
+      </div>
+      <div>
+        <ShopBanner />
+      </div>
+      <div>
+        <TrustedAffiliations />
+      </div>
+      <div>
+        <TripOfTheSeason />
+      </div>
+      <div>
+        <TestimonialsSection />
+      </div>
+
+      {/* <div>
         <FeaturedProducts />
       </div>
       <div>
@@ -51,7 +45,7 @@ function Home() {
       </div>
       <div>
         <UpdateProducts />
-      </div>
+      </div> */}
     </div>
   );
 }
